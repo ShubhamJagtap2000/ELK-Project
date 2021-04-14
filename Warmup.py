@@ -12,6 +12,6 @@ es = Elasticsearch(
 )
 
 #you can also use this one-liner
-#es = Elasticsearch(['https://Shubham:9V6yx+RbBw29@elastic.firewires.in:443'])
+#es = Elasticsearch(['https://YOUR_USERNAME:YOUR_PASSWORD@HOST_SERVER_NAME:PORT'])
 
 es.ping()          #Check whether the Elasticsearch responds
