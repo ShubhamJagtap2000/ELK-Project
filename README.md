@@ -57,7 +57,7 @@
   
   No Values                   -       Request Body in Query String
   
-  ## 4. URL-based Access Control:
+  ## 4. URL-based Access Control: 
   
   - Users can also have a proxy with URL-basedaccess control to secure access to the ElasticSearch indices
   - User has an option of apecifying an index in the URL and on each individual request body for some requests like:
