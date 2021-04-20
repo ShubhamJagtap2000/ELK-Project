@@ -60,7 +60,7 @@
   ## 4. URL-based Access Control: 
   
   - Users can also have a proxy with URL-basedaccess control to secure access to the ElasticSearch indices
-  - User has an option of apecifying an index in the URL and on each individual request body for some requests like:
+  - User has an option of specifying an index in the URL and on each individual request body for some requests like:
     - multi-search
     - multi-get
     - bulk
