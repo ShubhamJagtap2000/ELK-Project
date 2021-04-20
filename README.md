@@ -34,10 +34,10 @@
   e.g. <static_name{date_math_expr{date_format | time_zone}}>
   
   Where,
-    static_name: Static text part of the name
-    date_math_expr: Computes the date dynamically
-    date_format: Optional date format
-    time_zone: Optional time zone
+    - static_name: Static text part of the name
+    - date_math_expr: Computes the date dynamically
+    - date_format: Optional date format
+    - time_zone: Optional time zone
  
 ## 3. Common Options:
 
