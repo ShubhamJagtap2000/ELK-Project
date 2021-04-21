@@ -66,3 +66,34 @@
     - bulk
 
 # ElasticSearch APIs:
+
+**1. Document APIs:** Those APIs that perform the operation at the document level
+
+**2. Search APIs:** Used to search across indices of alll types
+
+**3. Aggregation APIs:** Used to run aggregations across an index
+
+**4. Index APIs:** To perform operations at the index level
+
+**5. Cluster APIs:** Operate on a subset of the nodes which can be specified with node filters
+
+## Document API
+
+### 1. Single Document API: 
+**to perform querying across a single document**
+- It consists of:
+  - Index API
+  - Get API
+  - Update API
+  - Delete API
+ 
+### 2. Multi-Document API:
+**to perform querying across multiple documents**
+- It consists of:
+  - Multi Get API
+  - Bulk API
+  - Delete By Query API
+  - Update By Query API
+  - Reindex API
+ 
+# Document API - CRUD Operations
