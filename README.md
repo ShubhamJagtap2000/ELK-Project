@@ -1,4 +1,4 @@
-# ELK-Project
+# ELK-Stack-Project
 - My ELK (Elasticsearch, Logstash, Kibana) work.
 - Here you can find what I have worked on as Associate Software Developer Intern(Virtual) at Firewires Solutions Pvt. Ltd. during COVID-19.
 
@@ -7,6 +7,22 @@
 - ElasticSearch is an open-source search engine built on top of Apache Lucene, as the rest of the ELK Stack, including Logstash and Kibana
 - Supports full-text search i.e. completely document based instead of tables and schema
 - Used for Single Page Application Projects
+
+# What is Logstash?
+
+- Tool for collecting and monitoring logs from remote machines
+- Works as data pipeeline for ElasticSearch
+
+# What is Kibana?
+
+- Data exploration and visualization tool
+- Used for log and time series analysis, application monitoring and operational intelligence
+- A front-end UI to your ELK Stack
+
+# How the ELK Work Together:
+
+![Screenshot (182)](https://user-images.githubusercontent.com/63872951/115670909-90ba0080-a367-11eb-9da2-2a3ebbe882c9.png)
+
 
 # Basic Concepts:
 
@@ -86,7 +102,7 @@
   - Get API
   - Update API
   - Delete API
- 
+
 ### 2. Multi-Document API:
 **to perform querying across multiple documents**
 - It consists of:
@@ -97,3 +113,6 @@
   - Reindex API
  
 # Document API - CRUD Operations
+
+
+
