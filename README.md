@@ -273,11 +273,17 @@ DELETE myplaylist/song/7
 
 - Create Index, Get Index, Index Exits, Delete Index, Index Aliases, Analyze, Index Stats, Refresh are some keywords/operations that we can do using the index APIs
 
+![Screenshot (183)](https://user-images.githubusercontent.com/63872951/115782998-f3e47b00-a3d9-11eb-9597-49902ca5d52e.png)
+
+
 # E. Cluster API
 
 - Cluster API is used to get the information about the cluster andits nodes andmaking changes in them
 
 - One can get information like Cluster Health, Cluster Stats, Cluster State, Cluster Pending Task, etc
+
+![Screenshot (185)](https://user-images.githubusercontent.com/63872951/115782777-b122a300-a3d9-11eb-84d3-0e5b88014acc.png)
+
 
 Example: Cluster Health API
 
@@ -302,6 +308,7 @@ Example: Cluster Health API
   "task_max_waiting_in_queue_millis" : 0,\
   "active_shards_percent_as_number" : 88.92045454545455\
 }
+
 
 - You can try any of above API for getting information about Cluster
 
