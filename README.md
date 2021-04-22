@@ -1,22 +1,22 @@
 # ELK-Stack-Project
 - My ELK (Elasticsearch, Logstash, Kibana) work.
-- Here you can find what I have worked on as Associate Software Developer Intern(Virtual) at Firewires Solutions Pvt. Ltd. during COVID-19.
+- Here you can find what I have worked on as an Associate Software Developer Intern(Virtual) at Firewires Solutions Pvt. Ltd. during COVID-19.
 
 # What is ElasticSearch?
 
 - ElasticSearch is an open-source search engine built on top of Apache Lucene, as the rest of the ELK Stack, including Logstash and Kibana
-- Supports full-text search i.e. completely document based instead of tables and schema
+- Supports full-text search i.e. completely document-based instead of tables and schema
 - Used for Single Page Application Projects
 
 # What is Logstash?
 
 - Tool for collecting and monitoring logs from remote machines
-- Works as data pipeeline for ElasticSearch
+- Works as data pipeline for ElasticSearch
 
 # What is Kibana?
 
 - Data exploration and visualization tool
-- Used for log and time series analysis, application monitoring and operational intelligence
+- Used for log and time series analysis, application monitoring, and operational intelligence
 - A front-end UI to your ELK Stack
 
 - **Role of Kibana**:
@@ -32,10 +32,10 @@
 
 # Basic Concepts:
 
-- **Index**: Collection of documents with similar characteristics and is identified by a name. This name is used to refer to the index while performing indexing, search, update, and delete-operations against the documents in it.
+- **Index**: Collection of documents with similar characteristics and is identified by a name. This name is used to refer to the index while performing indexing, search, update, and delete operations against the documents in it.
 - **Type**: Logical category/partition of an index for partitioning the index.
-- **Document**: A basic unit of information which can be indexed. It is expressed in JSON format.
-- **Shards**: ElasticSearch ahs ability to subdivide the index into multiple pieces called "shards". Each shard is fully-functional and independent "index" that can be hosted on any node within the cluster.
+- **Document**: A basic unit of information that can be indexed. It is expressed in JSON format.
+- **Shards**: ElasticSearch ahs ability to subdivide the index into multiple pieces called "shards". Each shard is a fully functional and independent "index" that can be hosted on any node within the cluster.
 - **Replicas**: ElasticSearch allows you to make one or more copies of your index's shards which are called replica shards or replica.
 
 # API Conventions:
@@ -51,8 +51,8 @@
 
 ## 2. Date Math Support in Index Name:
 
-- ElasticSearch lets you to search indices according to date and time
-- You need to specify date and time in a specific format like:  
+- ElasticSearch lets you search indices according to date and time
+- You need to specify the date and time in a specific format like:  
   e.g. <static_name{date_math_expr{date_format | time_zone}}>
   
   Where,
@@ -67,7 +67,7 @@
   
   Pretty Result               -       Time Units
   
-  HUman Readable Output       -       Byte Size Units
+  Human Readable Output       -       Byte Size Units
   
   Date Math                   -       Unit-less Quantities
   
@@ -81,7 +81,7 @@
   
 ## 4. URL-based Access Control: 
   
-  - Users can also have a proxy with URL-basedaccess control to secure access to the ElasticSearch indices
+  - Users can also have a proxy with URL-based access control to secure access to the ElasticSearch indices
   - User has an option of specifying an index in the URL and on each individual request body for some requests like:
     - multi-search
     - multi-get
@@ -91,7 +91,7 @@
 
 **1. Document APIs:** Those APIs that perform the operation at the document level
 
-**2. Search APIs:** Used to search across indices of alll types
+**2. Search APIs:** Used to search across indices of all types
 
 **3. Aggregation APIs:** Used to run aggregations across an index
 
@@ -151,11 +151,11 @@ PUT myplaylist/song/7 \
     "failed" : 0\
   }
   
-**Step 4:** Use GET method to read created document, in Console, run the following query
+**Step 4:** Use GET method to read the created document, in Console, run the following query
   
 GET myplaylist/song/7
 
-  - If you get **"found" : true** then your qyery is successful 
+  - If you get **"found" : true** then your query is successful 
  
  {\
   "_index" : "myplaylist",\
@@ -191,5 +191,17 @@ PUT myplaylist/song/7 \
 DELETE myplaylist/song/7
 
   - If you get **"successful" : 1** means that the document has been deleted
+
+# Search API
+
+### Using a search API, you can execute a search query and get back search hits that match the query
+
+**1. Multi Index:** You can search for the documents present in all the indices or in some specific indices
+
+**2. Multi-Type:** You can search all the documents in an index across all types or in some specified type
+
+**3. UIR Search:** Various parameters can be passed in a search operation using Uniform Resource Identifier:
+  - e.g. q, lenient, timeout, fields, from, sort, size, terminate_after
+  
 
 
