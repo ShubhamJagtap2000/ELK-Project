@@ -19,6 +19,12 @@
 - Used for log and time series analysis, application monitoring and operational intelligence
 - A front-end UI to your ELK Stack
 
+- **Role of Kibana**:
+  - Enables the searching and interaction with data in ElasticSearch
+  - Allows performing advanced analytics and creation of reports
+  - Enables creation and sharing of dynamic dashboards that get updated in realtime
+
+
 # How the ELK Work Together:
 
 ![Screenshot (182)](https://user-images.githubusercontent.com/63872951/115670909-90ba0080-a367-11eb-9da2-2a3ebbe882c9.png)
@@ -114,5 +120,76 @@
  
 # Document API - CRUD Operations
 
+**Step 1:** Go to Kibana >> Management >> Dev Tools >> 
+
+**Step 2:** Write down the following query in the Console and Click 'Run'
+
+PUT myplaylist/song/7 \
+{ \
+  "title" : "My holiday",\
+  "Artist" : "Shubzz",\
+  "Album" : "Linkin Park",\
+  "Year" : "2012"\
+}
+
+- PUT method is used in making REST API calls to create index and document
+- 'myplaylist' is the name of the index, 'song' is the document and '7' is the id
+
+**Step 3:** Check the output
+
+- If you get **"result" : "created"** in the following output, your query has created the document
+
+{\
+  "_index" : "myplaylist",\
+  "_type" : "song",\
+  "_id" : "7",\
+  "_version" : 8,\
+  "result" : "created",\
+  "_shards" : {\
+    "total" : 2,\
+    "successful" : 1,\
+    "failed" : 0\
+  }
+  
+**Step 4:** Use GET method to read created document, in Console, run the following query
+  
+GET myplaylist/song/7
+
+  - If you get **"found" : true** then your qyery is successful 
+ 
+ {\
+  "_index" : "myplaylist",\
+  "_type" : "song",\
+  "_id" : "7",\
+  "_version" : 8,\
+  "_seq_no" : 11,\
+  "_primary_term" : 1,\
+  "found" : true,\
+  "_source" : {\
+    "title" : "My holiday",\
+    "Artist" : "Shubzz",\
+    "Album" : "Linkin Park",\
+    "Year" : "2012"
+  }
+}
+
+**Step 5:** Update the document by adding some other parameters
+
+PUT myplaylist/song/7 \
+{ \
+  "title" : "My holiday",\
+  "Artist" : "Shubzz",\
+  "Album" : "Linkin Park",\
+  "Year" : "2012",\
+  "location" : "Delhi"\
+}
+
+  - Check the output and if you get **"successful" : 1** and **"result" : "true"**, query success.
+
+**Step 6:** use DELETE API to delete a document
+
+DELETE myplaylist/song/7
+
+  - If you get **"successful" : 1** means that the document has been deleted
 
 
