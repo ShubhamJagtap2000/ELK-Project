@@ -99,7 +99,7 @@
 
 **5. Cluster APIs:** Operate on a subset of the nodes which can be specified with node filters
 
-## Document API
+# A. Document API
 
 ### 1. Single Document API: 
 **to perform querying across a single document**
@@ -192,7 +192,7 @@ DELETE myplaylist/song/7
 
   - If you get **"successful" : 1** means that the document has been deleted
 
-# Search API
+# B. Search API
 
 ### Using a search API, you can execute a search query and get back search hits that match the query
 
@@ -203,5 +203,108 @@ DELETE myplaylist/song/7
 **3. UIR Search:** Various parameters can be passed in a search operation using Uniform Resource Identifier:
   - e.g. q, lenient, timeout, fields, from, sort, size, terminate_after
   
+  - Example: Using URI: q search
+  
+**Step 1:** Run this query in your Kibana Console: **GET myplaylist/song/_search?q=Year:2012*
+
+**Step 2:** You need to get the following result:
+
+{\
+  "took" : 955,\
+  "timed_out" : false,\
+  "_shards" : {\
+    "total" : 1,\
+    "successful" : 1,\
+    "skipped" : 0,\
+    "failed" : 0\
+  },\
+  "hits" : {\
+    "total" : {\
+      "value" : 1,\
+      "relation" : "eq"\
+    },\
+    "max_score" : 0.4700036,\
+    "hits" : [\
+      {\
+        "_index" : "myplaylist",\
+        "_type" : "song",\
+        "_id" : "7",\
+        "_score" : 0.4700036,\
+        "_source" : {\
+          "title" : "My holiday",\
+          "Artist" : "Shubzz",\
+          "Album" : "Linkin Park",\
+          "Year" : "2012"\
+        }\
+      }\
+    ]\
+  }\
+}
+
+# C. Aggregation API
+
+- Aggregation collects all the data which is selected by the search query
+
+- This framework consists of many building blocks called aggregators, which help in building complex summaries of the data
+
+- Below is the **syntax** of the aggregation,
+
+ "aggregations" : {\
+ "<aggregation_name>" : {\
+ "<aggregation_type>" : {\
+ <aggregation_body>\
+ }\
+ [, "meta" : { [<meta_data_body>] } ]?\
+ [, "aggregations" : { [<sub_aggregation>] + } ]?\
+ }\
+ [, "<aggregation_name_2>" : { ... } ]*\
+ }
+ 
+- **Aggregation - Types**:
+
+  - Bucketing
+  - Metric
+  - Matrix
+  - Pipeline
+
+# D. Index API
+
+- Index APIs are responsible formanaging all the aspects ofindex like settings, aliases, mappings, index templates 
+
+- Create Index, Get Index, Index Exits, Delete Index, Index Aliases, Analyze, Index Stats, Refresh are some keywords/operations that we can do using the index APIs
+
+# E. Cluster API
+
+- Cluster API is used to get the information about the cluster andits nodes andmaking changes in them
+
+- One can get information like Cluster Health, Cluster Stats, Cluster State, Cluster Pending Task, etc
+
+Example: Cluster Health API
+
+**Step 1:** Run this query in your Kibana Console: **GET _cluster/health**
+
+**Step 2:** Check for following result,
+
+{\
+  "cluster_name" : "elasticsearch",\
+  "status" : "yellow",\
+  "timed_out" : false,\
+  "number_of_nodes" : 1,\
+  "number_of_data_nodes" : 1,\
+  "active_primary_shards" : 313,\
+  "active_shards" : 313,\
+  "relocating_shards" : 0,\
+  "initializing_shards" : 0,\
+  "unassigned_shards" : 39,\
+  "delayed_unassigned_shards" : 0,\
+  "number_of_pending_tasks" : 0,\
+  "number_of_in_flight_fetch" : 0,\
+  "task_max_waiting_in_queue_millis" : 0,\
+  "active_shards_percent_as_number" : 88.92045454545455\
+}
+
+- You can try any of above API for getting information about Cluster
+
+# Query DSL
 
 
