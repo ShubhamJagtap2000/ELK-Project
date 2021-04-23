@@ -314,7 +314,7 @@ Example: Cluster Health API
 
 # Query DSL
 
-- Elasticsearch provides a full Query DSL(Domain-Specifies Language) based onJSON to define queries
+- Elasticsearch provides a full Query DSL(Domain-Specified Language) based onJSON to define queries
 - Query DSL is an AST of queries, consisting of of two types of clause, majorly,
   
   - Leaf Query Cluse(Looks for particular value in a particular field)
