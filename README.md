@@ -314,4 +314,31 @@ Example: Cluster Health API
 
 # Query DSL
 
+- Elasticsearch provides a full Query DSL(Domain-Specifies Language) based onJSON to define queries
+- Query DSL is an AST of queries, consisting of of two types of clause, majorly,
+  
+  - Leaf Query Cluse(Looks for particular value in a particular field)
+  - Compound Query Clause(Combines Leaf Query Clause and other clauses to form a query)
+
+# Mapping
+
+- Mapping is the process of defining how a document, and the fields that it contains, are stored and indexed
+
+- **Mapping Types**
+
+  1. Meta-fields
+  2. Fields or Properties
+  
+- **Field Data Types**
+
+  1. Core Data Types
+  2. Complex Data Types
+  3. Geo Data Types
+  4. Specialized Data Types
+
+- **Mapping Parameters**
+
+![Screenshot (186)](https://user-images.githubusercontent.com/63872951/115829696-e73d4280-a42c-11eb-80db-c62e52af6ee2.png)
+
+
 
