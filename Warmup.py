@@ -18,6 +18,10 @@ es = Elasticsearch(
 #you can also use this one-liner
 #es = Elasticsearch(['https://YOUR_USERNAME:YOUR_PASSWORD@HOST_SERVER_NAME:PORT'])
 
+#Check whether the Elasticsearch responds
 es.ping()          #Check whether the Elasticsearch responds
 
-df = ed.DataFrame(es, es_index_pattern="NAME_OF_INDEX_PATTERN")
+#Invoke and import index data into eland dataframe
+df = ed.DataFrame(es, es_index_pattern="NAME_OF_INDEX_PATTERN")     
+
+df
