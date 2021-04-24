@@ -345,7 +345,7 @@ Example: Cluster Health API
 
 # Analysis
 
-- **During a search operation when a query is processed, the content in any index is ana;yzed by analysis module**
+- **During a search operation when a query is processed, the content in any index is analyzed by analysis module**
 
 - **The analyzer module contains the following,**
 
