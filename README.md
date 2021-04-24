@@ -340,5 +340,10 @@ Example: Cluster Health API
 
 ![Screenshot (186)](https://user-images.githubusercontent.com/63872951/115829696-e73d4280-a42c-11eb-80db-c62e52af6ee2.png)
 
+# Analysis
 
+- **During a search operation when a query is processed, the content in any index is ana;yzed by analysis module**
 
+- **The analyzer module contains,**
+
+![Screenshot (187)](https://user-images.githubusercontent.com/63872951/115969102-ee616f00-a558-11eb-9a4a-54c901108dc7.png)
