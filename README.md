@@ -37,6 +37,9 @@
 - **Document**: A basic unit of information that can be indexed. It is expressed in JSON format.
 - **Shards**: ElasticSearch ahs ability to subdivide the index into multiple pieces called "shards". Each shard is a fully functional and independent "index" that can be hosted on any node within the cluster.
 - **Replicas**: ElasticSearch allows you to make one or more copies of your index's shards which are called replica shards or replica.
+- **Cluster**: Collection of nodes. Can contain as many nodes as you can. Provides indexing and search capability across all nodes. Unique.
+- **Node**: Node stores searchable data, participates in a cluster's indxing and search capabilities, identified by a name. A node joins a cluster named "elasticsearch" by default.
+- 
 
 # API Conventions:
 
@@ -344,6 +347,10 @@ Example: Cluster Health API
 
 - **During a search operation when a query is processed, the content in any index is ana;yzed by analysis module**
 
-- **The analyzer module contains,**
+- **The analyzer module contains the following,**
 
 ![Screenshot (187)](https://user-images.githubusercontent.com/63872951/115969102-ee616f00-a558-11eb-9a4a-54c901108dc7.png)
+
+- The process of converting a text into a token and terms which are added to an inverted index for search is called analysis. It is carried out using analyzer.
+- Analyzer can be in-built or custom
+- An analyzer converts the fields into tokens 
