@@ -39,7 +39,7 @@
 - **Replicas**: ElasticSearch allows you to make one or more copies of your index's shards which are called replica shards or replica.
 - **Cluster**: Collection of nodes. Can contain as many nodes as you can. Provides indexing and search capability across all nodes. Unique.
 - **Node**: Node stores searchable data, participates in a cluster's indxing and search capabilities, identified by a name. A node joins a cluster named "elasticsearch" by default.
-- 
+ 
 
 # API Conventions:
 
