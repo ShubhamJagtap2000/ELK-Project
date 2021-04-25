@@ -203,7 +203,7 @@ DELETE myplaylist/song/7
 
 **2. Multi-Type:** You can search all the documents in an index across all types or in some specified type
 
-**3. UIR Search:** Various parameters can be passed in a search operation using Uniform Resource Identifier:
+**3. URI Search:** Various parameters can be passed in a search operation using Uniform Resource Identifier:
   - e.g. q, lenient, timeout, fields, from, sort, size, terminate_after
   
   - Example: Using URI: q search
