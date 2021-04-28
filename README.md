@@ -32,17 +32,17 @@
 
 # Basic Concepts:
 
-**1. Index**: Collection of documents with similar characteristics and is identified by a name. This name is used to refer to the index while performing indexing, search, update, and delete operations against the documents in it.\
+**1. Index**: Collection of documents with similar characteristics and is identified by a name. This name is used to refer to the index while performing indexing, search, update, and delete operations against the documents in it.
 
-**2. Type**: Logical category/partition of an index for partitioning the index.\
+**2. Type**: Logical category/partition of an index for partitioning the index.
 
-**3. Document**: A basic unit of information that can be indexed. It is expressed in JSON format.\
+**3. Document**: A basic unit of information that can be indexed. It is expressed in JSON format.
 
-**4. Shards**: ElasticSearch ahs ability to subdivide the index into multiple pieces called "shards". Each shard is a fully functional and independent "index" that can be hosted on any node within the cluster.\
+**4. Shards**: ElasticSearch ahs ability to subdivide the index into multiple pieces called "shards". Each shard is a fully functional and independent "index" that can be hosted on any node within the cluster.
 
-**5. Replicas**: ElasticSearch allows you to make one or more copies of your index's shards which are called replica shards or replica.\
+**5. Replicas**: ElasticSearch allows you to make one or more copies of your index's shards which are called replica shards or replica.
 
-**6. Cluster**: Collection of nodes. Can contain as many nodes as you can. Provides indexing and search capability across all nodes. Unique\.
+**6. Cluster**: Collection of nodes. Can contain as many nodes as you can. Provides indexing and search capability across all nodes. Unique.
 
 **7. Node**: Node stores searchable data, participates in a cluster's indxing and search capabilities, identified by a name. A node joins a cluster named "elasticsearch" by default.
  
