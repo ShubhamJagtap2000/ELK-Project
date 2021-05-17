@@ -2,7 +2,9 @@
 - My ELK (Elasticsearch, Logstash, Kibana) work.
 - Here you can find what I have worked on as an Associate Software Developer Intern(Virtual) at Firewires Solutions Pvt. Ltd. during COVID-19.
 
-**[Source Video for the Following Introduction](https://youtu.be/1EnvkPf7t6Y)**
+**[Sources for the Following Introduction]**
+1. [Elasticsearch Tutorial for Beginners](https://youtu.be/gQ1c1uILyKI)
+2. [Getting Started](https://youtu.be/1EnvkPf7t6Y)
 
 # What is ElasticSearch?
 
